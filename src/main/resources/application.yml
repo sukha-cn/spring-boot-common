@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/my_db?useSSL=false
+    username: root
+    password: root
+  mvc:
+    dispatch-options-request: true
+  # redis
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+  # json
+  jackson:
+    default-property-inclusion: NON_NULL
+    date-format:  yyyy-MM-dd HH:mm:ss
+# mybatis
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.winter.model
+# log
+logging:
+  config: classpath:logback-spring.xml
