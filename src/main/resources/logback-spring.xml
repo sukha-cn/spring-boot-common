@@ -11,9 +11,9 @@
         </encoder>
     </appender>
     <appender name="stdout" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${logback.logdir}/stdout.log</File>
+        <File>${logback.dir}/stdout.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logback.logdir}/stdout-%d{yyyyMMdd}.log</fileNamePattern>
+            <fileNamePattern>${logback.dir}/stdout-%d{yyyyMMdd}.log</fileNamePattern>
         </rollingPolicy>
         <encoder>
             <pattern>
@@ -24,9 +24,9 @@
     </appender>
 
     <appender name="common-error" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${logback.logdir}/common-error.log</File>
+        <File>${logback.dir}/common-error.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logback.logdir}/common-error-%d{yyyyMMdd}.log</fileNamePattern>
+            <fileNamePattern>${logback.dir}/common-error-%d{yyyyMMdd}.log</fileNamePattern>
         </rollingPolicy>
         <encoder>
             <pattern>
