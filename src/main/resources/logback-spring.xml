@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <property name="logback.dir" value="~/logs/"/>
+    <property name="logback.dir" value="~/logs"/>
     <property name="logback.name" value="ushare"/>
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
@@ -11,9 +11,9 @@
         </encoder>
     </appender>
     <appender name="stdout" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${logback.logdir}stdout.log</File>
+        <File>${logback.logdir}/stdout.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logback.logdir}stdout-%d{yyyyMMdd}.log</fileNamePattern>
+            <fileNamePattern>${logback.logdir}/stdout-%d{yyyyMMdd}.log</fileNamePattern>
         </rollingPolicy>
         <encoder>
             <pattern>
@@ -24,9 +24,9 @@
     </appender>
 
     <appender name="common-error" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${logback.logdir}common-error.log</File>
+        <File>${logback.logdir}/common-error.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logback.logdir}common-error-%d{yyyyMMdd}.log</fileNamePattern>
+            <fileNamePattern>${logback.logdir}/common-error-%d{yyyyMMdd}.log</fileNamePattern>
         </rollingPolicy>
         <encoder>
             <pattern>
